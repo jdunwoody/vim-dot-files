@@ -24,16 +24,17 @@ Bundle 'Syntastic'
 Bundle 'matchit.zip'
 Bundle 'nerdcommenter'
 Bundle 'repeat.vim'
+Bundle 'fugitive.vim'
 "Bundle 'indentruby.vim'
 
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'flazz/vim-colorschemes.git'
 Bundle 'kien/ctrlp.vim.git'
-Bundle 'tpope/vim-fugitive.git'
+"Bundle 'tpope/vim-fugitive.git'
 Bundle 'jeetsukumaran/vim-buffergator.git'
 Bundle 'Tabular'
 "Bundle 'vim-scripts/copypath.vim.git'
@@ -72,6 +73,8 @@ set nu
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+set nowrap
 
 nmap Y y$
 nmap <space> zz
