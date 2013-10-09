@@ -1,6 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
-filetype plugin on
+"filetype plugin on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -64,6 +64,7 @@ filetype plugin indent on     " required!
 
 let mapleader = ";"
 colorscheme jellybeans
+set nu
 
 nmap Y y$
 nmap <space> zz
@@ -84,6 +85,9 @@ noremap <C-l> <C-w>l
 
 inoremap jk <Esc>
 nnoremap JJJJ <Nop>
+
+inoremap <C-/> <leader>cc
+nnoremap <C-/> <leader>cc
 
 " CtrlP
 nmap <D-t> :CtrlP<cr>
