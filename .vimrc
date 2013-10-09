@@ -64,7 +64,14 @@ filetype plugin indent on     " required!
 
 let mapleader = ";"
 colorscheme jellybeans
+
+" line number
 set nu
+
+" tabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 nmap Y y$
 nmap <space> zz
