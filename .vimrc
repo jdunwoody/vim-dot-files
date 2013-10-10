@@ -45,12 +45,11 @@ Bundle 'Tabular'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-"Bundle 'CopyPath'
+
 " non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
+
 " git repos on your local machine (ie. when working on your own plugin)
-" Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
+
 
 filetype plugin indent on     " required!
 "
@@ -74,7 +73,23 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" no wraps
 set nowrap
+
+set scrolloff=3
+
+" Searching
+set hlsearch
+set incsearch
+
+set cursorline
+
+"remove right-hand scroll bar
+set guioptions-=r
+
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set laststatus=2
+set lazyredraw
 
 nmap Y y$
 nmap <space> zz
@@ -106,7 +121,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 40
 
-
 set wildignore+=vendor/gems/*,tmp/*,coverage/*,public/*,spec/javascripts/generated/*,db/bootstrap/*,vendor/gems/
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.json,*.pdf,*.epub,*.ipa,*.jpeg,*.jpg,*.log,*.cache
 
@@ -115,11 +129,6 @@ au FocusLost * :wa
 
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-set scrolloff=3
-
-" Searching
-set hlsearch
-set incsearch
 
 " Open the next item and keeping the focus in the quickfix window
 autocmd BufWinEnter quickfix noremap <buffer> j :cn<CR><C-w><C-p>
@@ -152,17 +161,10 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 nmap <leader>U mQgewvU`Q
 nmap <leader>L mQgewvu`Q
 
-set cursorline
 
 " upper/lower word
 nmap <leader>u mQviwU`Q
 nmap <leader>l mQviwu`Q
-
-"nmap ,cs :let @*=expand("%")<CR>
-"nmap ,cl :let @*=expand("%:p")<CR>
-
-":!echo "%:p" | pbcopy
-"map <leader-leader> :!echo "%:p" pbcopy<CR>
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%101v.\+/
@@ -190,10 +192,9 @@ vmap <Leader>a: :Tabularize /:/l0 \zs<CR>
 
 "condenses multiple blank lines
 ":%s/\n\{3,}/\r\r/e
-set guioptions-=r  "remove right-hand scroll bar
 
 "%s/"\([^"]*\)"/'\1'/gc  "Replaces double with single quotes
 
-inoremap <C-/> <leader>c<space>
-nnoremap <C-/> <leader>c<space>
+imap <C-/> <leader>c<space>
+nmap <C-/> <leader>c<space>
 
