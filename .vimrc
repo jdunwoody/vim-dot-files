@@ -34,7 +34,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'flazz/vim-colorschemes.git'
 Bundle 'kien/ctrlp.vim.git'
-"Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-fugitive.git'
 Bundle 'jeetsukumaran/vim-buffergator.git'
 Bundle 'Tabular'
 "Bundle 'vim-scripts/copypath.vim.git'
@@ -120,6 +120,10 @@ au FocusLost * :wa
 autocmd BufWritePre * :%s/\s\+$//e
 set scrolloff=3
 
+" Searching
+set hlsearch
+set incsearch
+
 " Open the next item and keeping the focus in the quickfix window
 autocmd BufWinEnter quickfix noremap <buffer> j :cn<CR><C-w><C-p>
 
@@ -143,12 +147,7 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
-nmap <leader>fef ggVG=
-
-"augroup myvimrc
-"au!
-"au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-"augroup END
+nmap <leader>r ggVG=
 
 nmap <silent> <leader>ul :t.<CR>Vr=
 
@@ -171,22 +170,20 @@ nmap <leader>l mQviwu`Q
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%101v.\+/
 
-set clipboard=unnamed
+set clipboardjunnamed
 
 "au BufNew *.rb 0r ~/.vim/ruby.skel
 au BufNewFile *.rb 0r ~/ruby.skel
 
 command Pry :normal A<CR>binding.pry
-nmap <leader>b :Pry<CR>==
+nmap <leader>pry :Pry<CR>==
 
-if exists(":Tabularize")
-	nmap <Leader>a=> :Tabularize /=><CR>
-	vmap <Leader>a=> :Tabularize /=><CR>
-	nmap <Leader>a= :Tabularize /=<CR>
-	vmap <Leader>a= :Tabularize /=<CR>
-	nmap <Leader>a: :Tabularize /:/l0 \zs<CR>
-	vmap <Leader>a: :Tabularize /:/l0 \zs<CR>
-endif
+nmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a=> :Tabularize /=><CR>
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:/l0 \zs<CR>
+vmap <Leader>a: :Tabularize /:/l0 \zs<CR>
 
 "nmap <Leader>> :%s/:\(\w*\) .*=>/\1: /gc
 "vmap <Leader>> :%s/:\(\w*\) .*=>/\1: /gc
