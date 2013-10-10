@@ -96,9 +96,6 @@ noremap <C-l> <C-w>l
 inoremap jk <Esc>
 nnoremap JJJJ <Nop>
 
-inoremap <C-/> <leader>cc
-nnoremap <C-/> <leader>cc
-
 " CtrlP
 nmap <D-t> :CtrlP<cr>
 let g:ctrlp_match_window_bottom = 0
@@ -170,7 +167,7 @@ nmap <leader>l mQviwu`Q
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%101v.\+/
 
-set clipboardjunnamed
+set clipboard=unnamed
 
 "au BufNew *.rb 0r ~/.vim/ruby.skel
 au BufNewFile *.rb 0r ~/ruby.skel
@@ -196,4 +193,7 @@ vmap <Leader>a: :Tabularize /:/l0 \zs<CR>
 set guioptions-=r  "remove right-hand scroll bar
 
 "%s/"\([^"]*\)"/'\1'/gc  "Replaces double with single quotes
+
+inoremap <C-/> <leader>c<space>
+nnoremap <C-/> <leader>c<space>
 
