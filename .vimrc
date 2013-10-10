@@ -195,6 +195,7 @@ vmap <Leader>a: :Tabularize /:/l0 \zs<CR>
 
 "%s/"\([^"]*\)"/'\1'/gc  "Replaces double with single quotes
 
-imap <C-/> <leader>c<space>
-nmap <C-/> <leader>c<space>
+imap <D-/> <leader>c<space>
+nmap <D-/> <leader>c<space>
+vmap <D-/> <leader>c<space>
 
