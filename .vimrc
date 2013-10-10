@@ -25,6 +25,7 @@ Bundle 'matchit.zip'
 Bundle 'nerdcommenter'
 Bundle 'repeat.vim'
 Bundle 'fugitive.vim'
+Bundle 'vim-coffee-script'
 "Bundle 'indentruby.vim'
 
 "Bundle 'tpope/vim-fugitive'
