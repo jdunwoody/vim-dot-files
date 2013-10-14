@@ -201,3 +201,5 @@ imap <D-/> <leader>c<space>
 nmap <D-/> <leader>c<space>
 vmap <D-/> <leader>c<space>
 
+" Ensure correct ruby is used for linting (NOT SYSTEM RUBY)
+let g:syntastic_ruby_checkers=['~/.rbenv/shims/ruby']
