@@ -89,7 +89,7 @@ set cursorline
 "remove right-hand scroll bar
 set guioptions-=r
 
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set laststatus=2
 set lazyredraw
 
