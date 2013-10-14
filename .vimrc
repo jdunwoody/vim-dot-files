@@ -155,7 +155,7 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
-nmap <leader>r maggVG=`a
+nmap <leader>r magg=G`a<space>
 
 nmap <silent> <leader>ul :t.<CR>Vr=
 
