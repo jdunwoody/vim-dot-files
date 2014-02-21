@@ -14,7 +14,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'scrooloose/nerdcommenter.git'
 
-Bundle 'slimv.vim'
+Bundle 'slim-template/vim-slim.git'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 Bundle 'SuperTab'
