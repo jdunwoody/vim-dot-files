@@ -41,6 +41,7 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'jeetsukumaran/vim-buffergator.git'
 Bundle 'Tabular'
 "Bundle 'vim-scripts/copypath.vim.git'
+Bundle 'jnwhiteh/vim-golang'
 
 
 "Bundle 'vim-scripts/copypath'
