@@ -26,7 +26,6 @@ Bundle 'nerdcommenter'
 Bundle 'repeat.vim'
 Bundle 'fugitive.vim'
 Bundle 'vim-coffee-script'
-Bundle 'Auto-Pairs'
 "Bundle 'indentruby.vim'
 
 "Bundle 'tpope/vim-fugitive'
