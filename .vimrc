@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'scrooloose/nerdcommenter.git'
 
+Bundle 'slimv.vim'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 Bundle 'SuperTab'
@@ -26,6 +27,7 @@ Bundle 'nerdcommenter'
 Bundle 'repeat.vim'
 Bundle 'fugitive.vim'
 Bundle 'vim-coffee-script'
+"Bundle 'Auto-Pairs'
 "Bundle 'indentruby.vim'
 
 "Bundle 'tpope/vim-fugitive'
@@ -83,7 +85,7 @@ set scrolloff=3
 set hlsearch
 set incsearch
 
-set cursorline
+"set cursorline
 
 "remove right-hand scroll bar
 set guioptions-=r
@@ -200,5 +202,13 @@ imap <D-/> <leader>c<space>
 nmap <D-/> <leader>c<space>
 vmap <D-/> <leader>c<space>
 
+nmap <Leader>y :%y+<CR>
+
+nmap <leader>xml :%!xmllint --format -<CR>
+
 " Ensure correct ruby is used for linting (NOT SYSTEM RUBY)
 let g:syntastic_ruby_checkers=['~/.rbenv/shims/ruby']
+
+set autoread
+
+let NERDTreeIgnore=[]
