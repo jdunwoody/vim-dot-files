@@ -30,20 +30,23 @@ Bundle 'vim-coffee-script'
 "Bundle 'Auto-Pairs'
 "Bundle 'indentruby.vim'
 
-"Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'flazz/vim-colorschemes.git'
 Bundle 'kien/ctrlp.vim.git'
-Bundle 'tpope/vim-fugitive.git'
 Bundle 'jeetsukumaran/vim-buffergator.git'
 Bundle 'Tabular'
 "Bundle 'vim-scripts/copypath.vim.git'
 Bundle 'jnwhiteh/vim-golang'
-
-
+Bundle 'groenewege/vim-less'
+Bundle 'mustache/vim-mustache-handlebars'
+"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'vim-ruby/vim-ruby.git'
+Bundle 'tpope/vim-repeat.git'
+Bundle 'koron/nyancat-vim'
 "Bundle 'vim-scripts/copypath'
 
 " vim-scripts repos
