@@ -2,6 +2,9 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 "filetype plugin on
 
+"reload current file
+":so %
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -48,10 +51,12 @@ Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'tpope/vim-repeat.git'
 Bundle 'koron/nyancat-vim'
 "Bundle 'vim-scripts/copypath'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'vim-json-bundle'
 
 " non github repos
 
@@ -119,6 +124,11 @@ inoremap jk <Esc>
 nnoremap JJJJ <Nop>
 
 " CtrlP
+"unlet g:ctrlp_user_command
+
+set wildignore+=vendor/gems,tmp/*,coverage,public,spec/javascripts/generated,db/bootstrap/,*/db/migrate/
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.json,*.pdf,*.epub,*.ipa,*.jpeg,*.jpg,*.log,*.cache
+
 nmap <D-t> :CtrlP<cr>
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_max_height = 20
@@ -128,8 +138,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 40
 
-set wildignore+=vendor/gems/*,tmp/*,coverage/*,public/*,spec/javascripts/generated/*,db/bootstrap/*,vendor/gems/
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.json,*.pdf,*.epub,*.ipa,*.jpeg,*.jpg,*.log,*.cache
 
 " Save on focus lost
 au FocusLost * :wa
@@ -176,7 +184,6 @@ nmap <leader>l mQviwu`Q
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%101v.\+/
 
-set clipboard=unnamed
 
 "au BufNew *.rb 0r ~/.vim/ruby.skel
 au BufNewFile *.rb 0r ~/ruby.skel
@@ -216,3 +223,15 @@ let g:syntastic_ruby_checkers=['~/.rbenv/shims/ruby']
 set autoread
 
 let NERDTreeIgnore=[]
+
+"set clipboard=unnamed
+"nmap cp :let @" = expand("%")
+"let @" = expand("%:p")
+
+
+nmap cp %et @" = expand("%:p")
+"full path
+"let @+ = expand("%:p")
+"relative path
+"let @+ = expand("%")
+
