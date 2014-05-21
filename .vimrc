@@ -57,6 +57,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'vim-json-bundle'
+Bundle 'vroom'
 
 " non github repos
 
@@ -99,7 +100,8 @@ set incsearch
 "remove right-hand scroll bar
 set guioptions-=r
 
-set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%{fugitive#statusline()}%h%m%r%y%=%c,%l/%L\ %P
+
 set laststatus=2
 set lazyredraw
 
@@ -164,7 +166,7 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 nnoremap <M-j> :m .+1<CR>== nnoremap <C-k> :m .-2<CR>==
 inoremap <M-j> <Esc>:m .+1<CR>==gi
-inoremap <M-k> <Esc>:m .-2<CR>==gi
+inoremap <M-j> <Esc>:m .+1<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
@@ -213,7 +215,7 @@ imap <D-/> <leader>c<space>
 nmap <D-/> <leader>c<space>
 vmap <D-/> <leader>c<space>
 
-nmap <Leader>y :%y+<CR>
+nmap <leader>y :%y+<CR>
 
 nmap <leader>xml :%!xmllint --format -<CR>
 
