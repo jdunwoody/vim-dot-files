@@ -1,70 +1,64 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
-"filetype plugin on
+set nocompatible
+filetype off
 
-"reload current file
-":so %
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+Plugin 'gmarik/Vundle.vim'
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree.git'
+"Plugin 'https://github.com/scrooloose/nerdcommenter.git'
+"Plugin 'scrooloose/nerdcommenter.git'
+"Plugin 'nerdcommenter'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'scrooloose/nerdcommenter.git'
+Plugin 'flazz/vim-colorschemes'
+":PluginInstall
 
-Bundle 'slim-template/vim-slim.git'
-Bundle 'ack.vim'
-Bundle 'surround.vim'
-Bundle 'SuperTab'
-Bundle 'EasyMotion'
-Bundle 'endwise.vim'
-"Bundle 'indent-object'
-Bundle 'Syntastic'
-Bundle 'matchit.zip'
-Bundle 'nerdcommenter'
-Bundle 'repeat.vim'
-Bundle 'fugitive.vim'
-Bundle 'vim-coffee-script'
-"Bundle 'Auto-Pairs'
-"Bundle 'indentruby.vim'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'ack.vim'
+Plugin 'surround.vim'
+Plugin 'SuperTab'
+Plugin 'EasyMotion'
+Plugin 'endwise.vim'
+"Plugin 'indent-object'
+Plugin 'Syntastic'
+Plugin 'matchit.zip'
+Plugin 'repeat.vim'
+Plugin 'fugitive.vim'
+Plugin 'vim-coffee-script'
+"Plugin 'Auto-Pairs'
+"Plugin 'indentruby.vim'
 
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'flazz/vim-colorschemes.git'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'jeetsukumaran/vim-buffergator.git'
-Bundle 'Tabular'
-"Bundle 'vim-scripts/copypath.vim.git'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'groenewege/vim-less'
-Bundle 'mustache/vim-mustache-handlebars'
-"Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'vim-ruby/vim-ruby.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'koron/nyancat-vim'
-"Bundle 'vim-scripts/copypath'
-Bundle 'ecomba/vim-ruby-refactoring'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'jeetsukumaran/vim-buffergator.git'
+Plugin 'Tabular'
+"Plugin 'vim-scripts/copypath.vim.git'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'groenewege/vim-less'
+Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'vim-ruby/vim-ruby.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'koron/nyancat-vim'
+"Plugin 'vim-scripts/copypath'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'vim-json-bundle'
-Bundle 'vroom'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'vim-json-bundle'
+Plugin 'vroom'
+Plugin 'Markdown'
 
-" non github repos
+call vundle#end()
+filetype plugin indent on
 
 " git repos on your local machine (ie. when working on your own plugin)
 
-
-filetype plugin indent on     " required!
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -76,7 +70,6 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 let mapleader = ";"
-colorscheme jellybeans
 
 " line number
 set nu
@@ -100,7 +93,7 @@ set incsearch
 "remove right-hand scroll bar
 set guioptions-=r
 
-set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%{fugitive#statusline()}%h%m%r%y%=%c,%l/%L\ %P
+"set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%{fugitive#statusline()}%h%m%r%y%=%c,%l/%L\ %P
 
 set laststatus=2
 set lazyredraw
@@ -237,3 +230,6 @@ nmap cp %et @" = expand("%:p")
 "relative path
 "let @+ = expand("%")
 
+colorscheme jellybeans
+
+set guifont=Menlo\ Regular:h16
