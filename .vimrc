@@ -71,6 +71,8 @@ filetype plugin indent on
 
 let mapleader = ";"
 
+set autoread
+
 " line number
 set nu
 
@@ -122,7 +124,7 @@ nnoremap JJJJ <Nop>
 "unlet g:ctrlp_user_command
 
 set wildignore+=vendor/gems,tmp/*,coverage,public,spec/javascripts/generated,db/bootstrap/,*/db/migrate/
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.json,*.pdf,*.epub,*.ipa,*.jpeg,*.jpg,*.log,*.cache
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.pdf,*.epub,*.ipa,*.jpeg,*.jpg,*.log,*.cache
 
 nmap <D-t> :CtrlP<cr>
 let g:ctrlp_match_window_bottom = 0
