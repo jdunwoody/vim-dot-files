@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+set noswapfile
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -74,7 +76,7 @@ let mapleader = ";"
 set autoread
 
 " line number
-set nu
+set nonumber
 
 " tabs
 set expandtab
@@ -225,7 +227,6 @@ let NERDTreeIgnore=[]
 "nmap cp :let @" = expand("%")
 "let @" = expand("%:p")
 
-
 nmap cp %et @" = expand("%:p")
 "full path
 "let @+ = expand("%:p")
@@ -235,3 +236,4 @@ nmap cp %et @" = expand("%:p")
 colorscheme jellybeans
 
 set guifont=Menlo\ Regular:h16
+
