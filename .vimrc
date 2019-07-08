@@ -3,6 +3,7 @@ let mapleader = ";"
 set autoread
 set autowriteall
 :au FocusLost * :wa
+set number
 
 " no wraps
 set nowrap
